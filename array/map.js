@@ -1,3 +1,14 @@
-const alunos = [{nome:"Pedro",n1:15,n2:30,n3:25},{nome:"Renata",n1:15,n2:25,n3:36}]
+const alunos = [
+  { nome: "Pedro", nota1: 15, nota2: 30, nota3: 27 },
+  { nome: "Renata", nota1: 15, nota2: 25, nota3: 36 },
+];
 
-alunos.map((aluno)=>console.log(`Nome: ${aluno.nome} Nota Total: ${aluno.n1+aluno.n2+aluno.n3}`))
+const alunosNotaTotal = alunos.map(aluno => retornarNomeNotaTotal(aluno));
+
+function retornarNomeNotaTotal({ nome, nota1, nota2, nota3 }) {
+  const total = nota1 + nota2 + nota3;
+  return {nome:nome,notaTotal:total}
+}
+
+console.log(alunos)
+console.log(alunosNotaTotal)
