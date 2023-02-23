@@ -7,7 +7,7 @@ const students = [
 ];
 
 const displayFinalResult = (
-  { name, note1, note2, note3 } = students,
+  { name, note1, note2, note3 },
   index
 ) => {
   const fullGrade = note1 + note2 + note3;
